@@ -1,0 +1,42 @@
+# Site settings
+name: Debian-Installer Settings
+email: mail@danny-edel.de
+description: "Preseed files for d-i automation"
+url: "https://dannyedel.github.io/d-i/"
+baseurl: /d-i
+github_username:  dannyedel
+author:
+    - name: Danny Edel
+    - email: mail@danny-edel.de
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Build settings
+permalink: pretty
+
+# make as github-ish as possible
+markdown: redcarpet
+redcarpet:
+  extensions:
+    - autolink
+    - with_toc_data
+
+highlighter: pygments
+
+# mimick github
+# fixed
+#safe: true
+lsi: false
+source: .
+
+# default-layout for all posts
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
